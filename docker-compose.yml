@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nginx:
+    image: "nginx:alpine"
+    expose:
+      - 7878
+    ports:
+      - "7878:7878"
+    volumes:
+      - "./nginx:/etc/nginx"
+      - "./nginx/content:/etc/nginx/html:ro"
